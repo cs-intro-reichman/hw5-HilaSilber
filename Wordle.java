@@ -145,8 +145,12 @@ public class Wordle {
 
         if (!won) {
             String res = new String(results[attempt - 1]);
-            System.err.println("Guess " + (attempt) + ": Result: " + res);
+            System.out.println("Guess " + (attempt) + ": Result: " + res);
             // ... follow the assignment examples for how the printing should look like
+        }
+        if (!won){
+            System.out.println("Sorry, you did not guess the word.\n" +
+                                "The secret word was: " + secret);
         }
 
         inp.close();
